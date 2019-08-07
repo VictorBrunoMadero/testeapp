@@ -1,0 +1,43 @@
+.navcolor {
+    background-color: #006bb6 !important;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.navtopsize{
+    height: 60px;
+}
+
+.nav-cor-geral {
+    color: #FFF !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: #006bb6 !important;
+}
+
+.nav-cor-geral:hover{
+    color: #FFF !important;
+    background: rgb(0,65,134);
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px;
+    border-bottom-color: #FFF !important;
+}
+
+.nav-brand-cor {
+    color: #FFF;
+}
+
+.nav-brand-cor:hover{
+    color: #FFF;
+}
+
+.Logo{
+    width: 200px;
+    height: 40px;
+}
+
+.navsair{
+    text-align: center;
+    width: 60px;
+    margin-left: 40px;
+    margin-right: 20px;
+}

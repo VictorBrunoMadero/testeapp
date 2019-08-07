@@ -1,0 +1,38 @@
+.caixaLogin {
+    margin-top: 20%;
+    margin-left: 38%;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(48,48,48,1);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(48,48,48,1);
+    box-shadow: 0px 0px 23px -1px rgba(48,48,48,1);
+    width: 380px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: #006bb6;
+}
+
+.input-group{
+    margin-top: 5px;
+}
+
+.usuario {
+    margin-top: 10%;
+}
+
+.grupoDados{
+    margin: 0 !important;
+}
+
+form{
+    width: 300px;
+    margin-left: 20px;
+}
+
+.input-group-text {
+    width: 80px;
+}
+
+.btnEntrar {
+    margin-top: 15px;
+    margin-left: 120px;
+    border-color: #02964b !important;
+}
