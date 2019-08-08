@@ -1,6 +1,7 @@
 import React from 'react';
 import UserTable from '../commons/UserTable';
 import Navegacao from '../../Navegacao';
+import EnderecoPadrao from '../commons/EnderecoPadrao';
 import { InputGroup, Input, InputGroupAddon, InputGroupText, Container, Row, Col } from 'reactstrap';
 
 const CadUsuarios = () => {
@@ -39,30 +40,7 @@ const CadUsuarios = () => {
               </InputGroup>
             </Col>
           </Row>
-          <InputGroup>
-            <Input placeholder="username" />
-            <InputGroupAddon addonType="append">
-              <InputGroupText>@example.com</InputGroupText>
-            </InputGroupAddon>
-          </InputGroup>
-          <br />
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">
-              <InputGroupText>$</InputGroupText>
-              <InputGroupText>$</InputGroupText>
-            </InputGroupAddon>
-            <Input placeholder="Dolla dolla billz yo!" />
-            <InputGroupAddon addonType="append">
-              <InputGroupText>$</InputGroupText>
-              <InputGroupText>$</InputGroupText>
-            </InputGroupAddon>
-          </InputGroup>
-          <br />
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">$</InputGroupAddon>
-            <Input placeholder="Amount" min={0} max={100} type="number" step="1" />
-            <InputGroupAddon addonType="append">.00</InputGroupAddon>
-          </InputGroup>
+          <EnderecoPadrao/>
         </Container>
       </div>
 
