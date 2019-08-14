@@ -37,7 +37,7 @@ class Navegacao extends React.Component {
         return (
             <div>
                 <Navbar className="navcolor" expand="md">
-                    <NavbarBrand href="/" className="nav-brand-cor" ><Logo className="logosize"/></NavbarBrand>
+                    <NavbarBrand href="/" className="nav-brand-cor" ><Logo className="logosize" /></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>

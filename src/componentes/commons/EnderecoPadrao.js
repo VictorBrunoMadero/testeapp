@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputGroup, Input, InputGroupAddon, InputGroupText, Container, Row, Col } from 'reactstrap';
+import { InputGroup, Input, InputGroupAddon, Row, Col } from 'reactstrap';
 
 const EnderecoPadrao = () => {
   return (
@@ -28,17 +28,23 @@ const EnderecoPadrao = () => {
         <Col xs="6">
           <InputGroup>
             <InputGroupAddon addonType="prepend">Bairro</InputGroupAddon>
-            <Input /> 
+            <Input />
           </InputGroup>
         </Col>
         <Col xs="3">
           <InputGroup>
             <InputGroupAddon addonType="prepend">CEP</InputGroupAddon>
-            <Input /> 
+            <Input />
           </InputGroup>
         </Col>
       </Row>
       <Row>
+        <Col>
+          <InputGroup>
+            <InputGroupAddon addonType="prepend">E-mail:</InputGroupAddon>
+            <Input />
+          </InputGroup>
+        </Col>
         <Col>
           <InputGroup>
             <InputGroupAddon addonType="prepend">Telefone</InputGroupAddon>

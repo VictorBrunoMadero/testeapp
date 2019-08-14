@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
 import { Button, Container, Row, Col, InputGroup, InputGroupAddon, Input, Form } from 'reactstrap';
 
-class App extends React.Component {
+const base = "http://localhost:";
+const door = "8080";
+const context = "/login/";
+const headers = {"Content-type":"application/x-www-form-urlencoded; charset=UTF-8"};
+
+export default class App extends React.Component {
 
     constructor(props) {
         super(props);
@@ -24,6 +28,14 @@ class App extends React.Component {
     enviarDados(event) {
         event.preventDefault();
         alert('Usuario: ' + this.state.usuario + '\nSenha: ' + this.state.senha);
+        fetch('https://api.github.com/gists', {
+            method: 'post',
+            body: JSON.stringify(opts)
+          }).then(function(response) {
+            return response.json();
+          }).then(function(data) {
+            ChromeSamples.log('Created Gist:', data.html_url);
+          });
     }
 
     render() {
@@ -31,7 +43,7 @@ class App extends React.Component {
             <div className='caixaLogin'>
                 <Container>
                     <Row>
-                        <Col className='grupoDados' sm={{ size: 4, order: 1, offset: 4 }}>
+                        <Col className='grupoDados' sm="11">
                             <Form onSubmit={this.enviarDados}>
                                 <InputGroup className='usuario'>
                                     <InputGroupAddon addonType="prepend">Usuário</InputGroupAddon>
@@ -41,7 +53,9 @@ class App extends React.Component {
                                     <InputGroupAddon addonType="prepend">Senha</InputGroupAddon>
                                     <Input type='password' name='senha' id='senha' onChange={this.recebeDados} />
                                 </InputGroup>
-                                <Link to='/dash'><Button className='btnEntrar' color="success" type='submit'>Entrar</Button></Link>
+                                {/*<Link to='/dash'>*/}
+                                <Button className='btnEntrar' color="success" type='submit'>Entrar</Button>
+                                {/*</Link>*/}
                             </Form>
                         </Col>
                     </Row>
@@ -50,5 +64,3 @@ class App extends React.Component {
         )
     }
 }
-
-export default App;
